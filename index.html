@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моё портфолио</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #222;
+        }
+        header {
+            background: #4f6df5;
+            color: white;
+            padding: 20px;
+        }
+        nav {
+            max-width: 1000px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 60px 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+        .hero {
+            min-height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        .hero-text {
+            flex: 1;
+        }
+        h1 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+        h1 span {
+            color: #4f6df5;
+        }
+        .hero p {
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+        .button {
+            padding: 12px 22px;
+            border: 0;
+            border-radius: 6px;
+            background: #4f6df5;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background: #3c58d0;
+        }
+        .hero-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: #dce2ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 80px;
+        }
+        #about,
+        #contact {
+            background: white;
+        }
+        .title {
+            text-align: center;
+            margin-bottom: 35px;
+            font-size: 32px;
+        }
+        .about-content {
+            display: flex;
+            gap: 40px;
+        }
+        .about-text,
+        .skills {
+            flex: 1;
+        }
+        .about-text {
+            color: #555;
+            line-height: 1.7;
+        }
+        .skills {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .skill {
+            padding: 20px;
+            background: #f0f2ff;
+            text-align: center;
+            border-radius: 8px;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .project {
+            background: white;
+            padding: 25px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .project h3 {
+            color: #4f6df5;
+            margin-bottom: 10px;
+        }
+        .project p {
+            color: #666;
+            line-height: 1.5;
+        }
+        .form {
+            max-width: 600px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .form input,
+        .form textarea {
+            padding: 13px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        .form textarea {
+            height: 120px;
+        }
+        #result {
+            text-align: center;
+            margin-top: 15px;
+            color: #4f6df5;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        @media (max-width: 700px) {
+            nav,
+            .hero,
+            .about-content {
+                flex-direction: column;
+            }
+            nav {
+                gap: 15px;
+            }
+            .hero {
+                text-align: center;
+            }
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 450px) {
+            .nav-links {
+                gap: 12px;
+                font-size: 14px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            h1 {
+                font-size: 36px;
+            }
+            .hero-image {
+                width: 190px;
+                height: 190px;
+            }
+            .skills {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">My Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#projects">Проекты</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>Привет! Я <span>Раушан</span></h1>
+            <p>
+                Я студентка, изучаю веб-разработку
+                и создаю свои первые проекты с помощью
+                HTML, CSS и JavaScript.
+            </p>
+            <button class="button" id="helloButton">
+                Узнать больше
+            </button>
+        </div>
+        <div class="hero-image">💻</div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <h2 class="title">Обо мне</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Меня зовут Раушан. Я изучаю
+                        информационные технологии и учусь
+                        создавать веб-страницы.
+                    </p>
+                    <br>
+                    <p>
+                        В процессе обучения я познакомилась
+                        с HTML, CSS и JavaScript.
+                    </p>
+                </div>
+                <div class="skills">
+                    <div class="skill">HTML</div>
+                    <div class="skill">CSS</div>
+                    <div class="skill">JavaScript</div>
+                    <div class="skill">GitHub</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="container">
+            <h2 class="title">Мои проекты</h2>
+            <div class="projects">
+                <article class="project">
+                    <h3>Web-сайт</h3>
+                    <p>
+                        Адаптивный сайт, созданный
+                        с помощью HTML и CSS.
+                    </p>
+                </article>
+                <article class="project">
+                    <h3>3D проект</h3>
+                    <p>
+                        Простая 3D-модель и анимация,
+                        созданные в Autodesk Maya.
+                    </p>
+                </article>
+                <article class="project">
+                    <h3>JavaScript</h3>
+                    <p>
+                        Небольшие программы с условиями,
+                        циклами и интерактивными элементами.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <h2 class="title">Связаться со мной</h2>
+            <form class="form" id="contactForm">
+                <input type="text" id="name" placeholder="Ваше имя">
+                <input type="email" id="email" placeholder="Ваш email">
+                <textarea id="userText"
+                    placeholder="Ваше сообщение"></textarea>
+                <button class="button" type="submit">
+                    Отправить
+                </button>
+            </form>
+            <div id="result"></div>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>© 2026 Раушан | Учебный проект</p>
+</footer>
+<script>
+    const helloButton = document.getElementById("helloButton");
+    helloButton.addEventListener("click", function() {
+        helloButton.textContent = "Спасибо!";
+        document.getElementById("about").scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+    const form = document.getElementById("contactForm");
+    const result = document.getElementById("result");
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const text = document.getElementById("userText").value;
+        if (name === "" || email === "" || text === "") {
+            result.textContent = "Заполните все поля.";
+        } else {
+            result.textContent =
+                "Сообщение отправлено. Спасибо, " + name + "!";
+            form.reset();
+        }
+    });
+</script>
+</body>
+</html>
